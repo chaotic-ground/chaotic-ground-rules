@@ -1,0 +1,14 @@
+# chaotic-ground가 관리하는 프로젝트 목록입니다. 규칙은 README.md를 보세요.
+
+defaults:
+  # 활동 기간 N
+  active_within: 3 months
+  # 메인테이너가 되는 데 필요한 최소 커밋 수 K
+  min_commits: 3
+
+projects:
+  # name: org 저장소 이름 (chaotic-ground/<name>)
+  # network: 포크 네트워크에 속한 아무 저장소 (owner/repo)
+  # active_within, min_commits: 이 프로젝트에서만 기본값을 덮어씀
+  - name: chaotic-ground-rules
+    network: chaotic-ground/chaotic-ground-rules
