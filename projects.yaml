@@ -1,4 +1,5 @@
-# chaotic-ground가 관리하는 프로젝트 목록입니다. 규칙은 README.md를 보세요.
+# chaotic-ground 조직의 모든 저장소가 관리 대상입니다. 규칙은 README.md를 보세요.
+# 이 파일에는 기본값과, 기본값을 덮어쓸 저장소만 적습니다.
 
 defaults:
   # 활동 기간 N
@@ -6,9 +7,8 @@ defaults:
   # 메인테이너가 되는 데 필요한 최소 커밋 수 K
   min_commits: 3
 
-projects:
-  # name: org 저장소 이름 (chaotic-ground/<name>)
-  # network: 포크 네트워크에 속한 아무 저장소 (owner/repo)
-  # active_within, min_commits: 이 프로젝트에서만 기본값을 덮어씀
-  - name: chaotic-ground-rules
-    network: chaotic-ground/chaotic-ground-rules
+# 저장소 이름(chaotic-ground/<이름>)을 키로 기본값을 덮어씁니다.
+# 예:
+#   wikven:
+#     active_within: 1 month
+overrides: {}
