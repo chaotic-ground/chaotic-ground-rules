@@ -2,7 +2,7 @@
 
 chaotic-ground가 포크 네트워크에서 챔피언과 메인테이너를 기계적으로 정하는 규칙입니다. 사람이 판단하지 않으므로 언제 무엇이 바뀔지 모릅니다. 본인 책임하에 쓰세요.
 
-chaotic-ground 조직의 모든 저장소가 관리 대상입니다. 저장소별 설정은 [`chaotic-ground.yaml`](chaotic-ground.yaml)에서 덮어쓸 수 있습니다.
+chaotic-ground 조직의 모든 저장소가 관리 대상입니다. 저장소별 설정은 [`chaotic.yaml`](chaotic.yaml)에서 덮어쓸 수 있습니다.
 
 ## 용어
 
@@ -48,7 +48,7 @@ org 저장소도 포크 네트워크 안의 저장소이므로, 메인테이너�
 
 ## 6. 설정
 
-N과 K의 기본값은 [`chaotic-ground.yaml`](chaotic-ground.yaml)의 `defaults`에 있습니다. 저장소마다 다르게 하려면 `overrides`에 저장소 이름으로 적습니다. 목록에 없는 저장소도 모두 기본값으로 관리됩니다.
+N과 K의 기본값은 [`chaotic.yaml`](chaotic.yaml)의 `defaults`에 있습니다. 저장소마다 다르게 하려면 `overrides`에 저장소 이름으로 적습니다. 목록에 없는 저장소도 모두 기본값으로 관리됩니다.
 
 ## 7. 이 저장소
 
