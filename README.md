@@ -31,7 +31,7 @@ chaotic-ground 조직의 모든 저장소가 관리 대상입니다. 저장소�
 
 ## 4. org 저장소
 
-org 저장소의 기본 브랜치는 챔피언의 기본 브랜치를 따라갑니다. org 저장소 README에 현재 챔피언과 선출 시각을 적습니다.
+org 저장소의 기본 브랜치는 챔피언의 기본 브랜치를 따라갑니다. 기본 브랜치를 그대로 따라가므로 README 대신 org 저장소 설명(description)과 이 저장소의 [`champions.json`](champions.json)에 현재 챔피언과 선출 시각을 적습니다.
 
 org 저장소도 포크 네트워크 안의 저장소이므로, 메인테이너들이 org 저장소에서 직접 작업하면 org 저장소 자신이 챔피언이 됩니다.
 
@@ -53,3 +53,7 @@ N과 K의 기본값은 [`chaotic.yaml`](chaotic.yaml)의 `defaults`에 있습니
 ## 7. 이 저장소
 
 이 저장소도 조직의 저장소이므로 관리 대상이며, 5번 메인테이너 규칙이 똑같이 적용됩니다. 이 저장소에서 활발히 커밋하는 사람이 메인테이너가 되고, 이 규칙을 고칠 수 있습니다.
+
+## 8. 자동화
+
+[`.github/workflows/chaotic.yml`](.github/workflows/chaotic.yml)이 매일 [`chaotic.py`](chaotic.py)를 돌려 위 규칙을 적용합니다. 조직 저장소에 푸시하고 권한을 바꿔야 하므로 조직 소유자가 만든 토큰을 `CHAOTIC_TOKEN` 시크릿에 넣어야 동작합니다. Actions 탭에서 수동으로 돌리면 기본값은 바꾸지 않고 할 일만 출력하는 시험 실행입니다.

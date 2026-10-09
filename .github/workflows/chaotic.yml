@@ -1,0 +1,35 @@
+name: chaotic
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 바꾸지 않고 할 일만 출력
+        type: boolean
+        default: true
+
+concurrency: chaotic
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pyyaml
+      - run: python3 chaotic.py
+        env:
+          CHAOTIC_TOKEN: ${{ secrets.CHAOTIC_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+      - name: Commit champions.json
+        run: |
+          git add champions.json
+          git diff --cached --quiet && exit 0
+          git -c user.name="github-actions[bot]" \
+              -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+              commit -m "Update champions"
+          git push
